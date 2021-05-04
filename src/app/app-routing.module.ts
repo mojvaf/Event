@@ -3,13 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { AppComponent } from './app.component';
 import { DetailEventComponent } from './detail-event/detail-event.component';
+import { EventComponent } from './event/event.component';
 
 const routes: Routes = [
   {
   path: '',  component:AppComponent
 },
 {
-  path: 'event/:id', component:DetailEventComponent
+  path: 'event/:id', component:EventComponent
+},
+{
+  path: 'detail', component:DetailEventComponent
 }
 ];
 
@@ -20,5 +24,5 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [
          DetailEventComponent,
-         AppComponent
+         EventComponent
 ]

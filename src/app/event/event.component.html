@@ -9,7 +9,8 @@
                  <img class="uk-border-circle" width="50" height="30" src="{{event.image_url}}">
              </div>
              <div class="uk-width-expand" >
-                 <h3 class="uk-card-title uk-margin-remove-bottom">{{event.speakers}}</h3>
+                 <h3 class="uk-card-title uk-margin-remove-bottom">{{event.speakers}}
+                   <a href="#" routerLink='/event'></a></h3>
                  <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">{{event.data}}</time></p>
                  <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">Title: {{event.title}}</time></p>
              </div>
@@ -19,6 +20,10 @@
          <p>{{event.description}}</p>
      </div>
  </div>
+ <div class="uk-card-footer">
+  <a (click)="onSelect(event)" href="#" routerLink="/event/:id" class="uk-button uk-button-text">Read more</a>
 </div>
 </div>
 </div>
+</div>
+
